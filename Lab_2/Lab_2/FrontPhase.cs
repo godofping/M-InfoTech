@@ -26,9 +26,9 @@ namespace Lab_2
         float DblTRWage;
         double DblWHTax;
         float DblNAPaid;
-        
 
-       
+
+
 
         Double DblSSSFund;
         Double DblGSISFund;
@@ -101,25 +101,16 @@ namespace Lab_2
             }
         }
 
-        
-
-        private void TBWHTax_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void TBTRWage_TextChanged(object sender, EventArgs e)
         {
             try
             {
                 double DblReg = Convert.ToDouble(TBTRWage.Text);
-               DblWHTax = DblReg * 0.03;
+                DblWHTax = DblReg * 0.03;
                 TBWHTax.Text = DblWHTax.ToString();
             }
             catch
             {
-
-
             }
         }
 
@@ -127,14 +118,129 @@ namespace Lab_2
         {
             try
             {
-                double DblWHTaxes2 = Convert.ToDouble(TBWHTax.Text);
-                double DblNAPaid = DblReg - DblWHTax;
+                double DblWHTax = Convert.ToDouble(TBWHTax.Text);
+                double DblRegWage = Convert.ToDouble(TBTRWage.Text);
 
+                double DblNAPaid = DblRegWage - DblWHTax;
+                TBNAPaid.Text = DblNAPaid.ToString();
+            }
+            catch
+            {
+            }
+        }
+        private void Deduction()
+        {
+            
+            TBTDedtn.Text = (float.Parse(TBSSSFund.Text)+float.Parse(TBGSISFund.Text)+float.Parse(TBPIbigFund.Text)+float.Parse(TBPHealthFund.Text)+float.Parse(TBOthers.Text)).ToString();
+           
+        }
+
+        private void TBOthers_TextChanged(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                Deduction();
+
+                if (string.IsNullOrEmpty(TBOthers.Text))
+                {
+                    TBOthers.Text = "0";
+                    
+                }
+                else
+                {
+                    
+                }
+            }
+            catch 
+            {
+
+                
+            }
+          
+        }
+
+        private void TBPHealthFund_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                Deduction();
+           
             }
             catch 
             {
 
                
+            }
+        }
+
+        private void TBPIbigFund_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+            
+                Deduction();
+                
+            }
+            catch
+            {
+
+             
+            }
+        }
+
+        private void TBGSISFund_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                Deduction();
+                
+            }
+            catch 
+            {
+
+             
+            }
+        }
+
+        private void TBSSSFund_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+             
+                Deduction();
+                
+            }
+            catch 
+            {
+
+             
+            }
+        }
+
+        private void sahodnya()
+        {
+            TBTNAPaid.Text= (float.Parse(TBNAPaid.Text) - float.Parse(TBTDedtn.Text)).ToString();
+
+        }
+
+        private void TBTDedtn_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (String.IsNullOrEmpty(TBTDedtn.Text))
+                {
+                   
+                }
+                sahodnya();
+
+            }
+            catch 
+            {
+               
+                return;
             }
         }
     }
