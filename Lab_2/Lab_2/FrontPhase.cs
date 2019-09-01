@@ -58,6 +58,21 @@ namespace Lab_2
             }
         }
 
+        private void TBRRHour_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                TBRegular.Text = (float.Parse(TBRRHour.Text) * float.Parse(TBTAHRRHour.Text)).ToString();
+            }
+            catch
+            {
+                TBRegular.Text = "00.0";
+
+            }
+        }
+
+
+
         private void TBTAHOTRHour_TextChanged(object sender, EventArgs e)
         {
             try
@@ -137,5 +152,12 @@ namespace Lab_2
                
             }
         }
+
+        private void FrontPhase_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

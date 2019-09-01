@@ -8,3 +8,13 @@ C:\Users\lev\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.csproj.GenerateResou
 C:\Users\lev\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.csproj.CoreCompileInputs.cache
 C:\Users\lev\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.exe
 C:\Users\lev\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.pdb
+C:\Users\63921\Desktop\M-InfoTech\Lab_2\Lab_2\bin\Debug\Lab_2.exe.config
+C:\Users\63921\Desktop\M-InfoTech\Lab_2\Lab_2\bin\Debug\Lab_2.exe
+C:\Users\63921\Desktop\M-InfoTech\Lab_2\Lab_2\bin\Debug\Lab_2.pdb
+C:\Users\63921\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.csprojAssemblyReference.cache
+C:\Users\63921\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.FrontPhase.resources
+C:\Users\63921\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.Properties.Resources.resources
+C:\Users\63921\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.csproj.GenerateResource.cache
+C:\Users\63921\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.csproj.CoreCompileInputs.cache
+C:\Users\63921\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.exe
+C:\Users\63921\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.pdb
