@@ -27,17 +27,6 @@ namespace Lab_2
         double DblWHTax;
         float DblNAPaid;
 
-
-
-
-        Double DblSSSFund;
-        Double DblGSISFund;
-        Double DblPGIBGFund;
-        Double DblPHLHLTHFund;
-        Double DblOthers;
-        Double DblTDtn;
-        Double DblTNAP;
-
         public FrontPhase()
         {
             InitializeComponent();
@@ -86,6 +75,20 @@ namespace Lab_2
             }
         }
 
+        /*  private void TBSSSFund_TextChanged(object sender, EventArgs e)
+        {
+              TBTDedtn.Text = "00.0";
+          try
+          {
+          TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+         
+            }
+            catch
+            {
+            TBTDedtn.Text = "00.0";
+            }
+            }
+        */
         private void TBOvertime_TextChanged(object sender, EventArgs e)
         {
             TBTRWage.Text = "00.0";
@@ -128,120 +131,264 @@ namespace Lab_2
             {
             }
         }
-        private void Deduction()
-        {
-            
-            TBTDedtn.Text = (float.Parse(TBSSSFund.Text)+float.Parse(TBGSISFund.Text)+float.Parse(TBPIbigFund.Text)+float.Parse(TBPHealthFund.Text)+float.Parse(TBOthers.Text)).ToString();
-           
-        }
-
-        private void TBOthers_TextChanged(object sender, EventArgs e)
-        {
-            
-            try
-            {
-                Deduction();
-
-                if (string.IsNullOrEmpty(TBOthers.Text))
-                {
-                    TBOthers.Text = "0";
-                    
-                }
-                else
-                {
-                    
-                }
-            }
-            catch 
-            {
-
-                
-            }
-          
-        }
-
-        private void TBPHealthFund_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-               
-                Deduction();
-           
-            }
-            catch 
-            {
-
-               
-            }
-        }
-
-        private void TBPIbigFund_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-            
-                Deduction();
-                
-            }
-            catch
-            {
-
-             
-            }
-        }
-
-        private void TBGSISFund_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                
-                Deduction();
-                
-            }
-            catch 
-            {
-
-             
-            }
-        }
-
-        private void TBSSSFund_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-             
-                Deduction();
-                
-            }
-            catch 
-            {
-
-             
-            }
-        }
-
-        private void sahodnya()
-        {
-            TBTNAPaid.Text= (float.Parse(TBNAPaid.Text) - float.Parse(TBTDedtn.Text)).ToString();
-
-        }
-
         private void TBTDedtn_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                if (String.IsNullOrEmpty(TBTDedtn.Text))
-                {
-                   
-                }
-                sahodnya();
+                double last1 = Convert.ToDouble(TBNAPaid.Text);
+                double last2 = Convert.ToDouble(TBTDedtn.Text);
 
+                double last = last1 - last2 + 0;
+                TBTNAPaid.Text = last.ToString();
             }
             catch 
             {
-               
-                return;
+
+       
+            }
+           
+        }
+        private void Dedt()
+        {
+            TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+
+        }
+        private void TBEmployeeID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+
+
+            }
+            catch
+            {
+
+            }
+
+
+
+        }
+
+        private void TBLName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+
+
+            }
+            catch
+            {
+
+            }
+
+        }
+
+        private void TBFName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+
+
+            }
+            catch
+            {
+
             }
         }
+
+        private void TBMName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void TBAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void TBPosition_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void TBTMNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void TBRRHour_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void TBOthers_TextChanged(object sender, EventArgs e)
+        {
+            TBTDedtn.Text = "00.0";
+            try
+            {
+                TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+
+            }
+            catch
+            {
+                TBTDedtn.Text = "00.0";
+            }
+
+        }
+
+        private void TBPHealthFund_TextChanged(object sender, EventArgs e)
+        {
+            TBTDedtn.Text = "00.0";
+            try
+            {
+                TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+
+            }
+            catch
+            {
+                TBTDedtn.Text = "00.0";
+            }
+
+        }
+
+        private void TBPIbigFund_TextChanged(object sender, EventArgs e)
+        {
+            TBTDedtn.Text = "00.0";
+            try
+            {
+                TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+
+            }
+            catch
+            {
+                TBTDedtn.Text = "00.0";
+            }
+
+        }
+
+        private void TBGSISFund_TextChanged(object sender, EventArgs e)
+        {
+            TBTDedtn.Text = "00.0";
+            try
+            {
+                TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+
+            }
+            catch
+            {
+                TBTDedtn.Text = "00.0";
+            }
+
+        }
+
+        private void TBSSSFund_TextChanged(object sender, EventArgs e)
+        {
+            TBTDedtn.Text = "00.0";
+            try
+            {
+                TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+
+            }
+            catch
+            {
+                TBTDedtn.Text = "00.0";
+            }
+
+        }
+
+        private void TBTNAPaid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+        /*private void GB1_Enter(object sender, EventArgs e)
+        {
+          
+            
+         
+            
+          
+          
+
+            }*/
+
+
+
     }
 }

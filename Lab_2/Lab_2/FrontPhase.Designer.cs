@@ -44,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TBEmployeeID = new System.Windows.Forms.TextBox();
             this.GB2 = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.TBOvertime = new System.Windows.Forms.TextBox();
@@ -78,6 +79,7 @@
             this.Label = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.GB1.SuspendLayout();
             this.GB2.SuspendLayout();
             this.GB3.SuspendLayout();
@@ -99,26 +101,27 @@
             this.GB1.Controls.Add(this.label2);
             this.GB1.Controls.Add(this.label1);
             this.GB1.Controls.Add(this.TBEmployeeID);
-            this.GB1.Location = new System.Drawing.Point(142, 12);
+            this.GB1.Location = new System.Drawing.Point(12, 12);
             this.GB1.Name = "GB1";
-            this.GB1.Size = new System.Drawing.Size(476, 238);
+            this.GB1.Size = new System.Drawing.Size(411, 238);
             this.GB1.TabIndex = 0;
             this.GB1.TabStop = false;
-            this.GB1.Text = "Employee\'s Information";
             // 
             // TBMName
             // 
-            this.TBMName.Location = new System.Drawing.Point(359, 92);
+            this.TBMName.Location = new System.Drawing.Point(305, 92);
             this.TBMName.Name = "TBMName";
             this.TBMName.Size = new System.Drawing.Size(97, 20);
             this.TBMName.TabIndex = 10;
+            this.TBMName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBMName_KeyPress);
             // 
             // TBPosition
             // 
             this.TBPosition.Location = new System.Drawing.Point(232, 197);
             this.TBPosition.Name = "TBPosition";
-            this.TBPosition.Size = new System.Drawing.Size(224, 20);
+            this.TBPosition.Size = new System.Drawing.Size(170, 20);
             this.TBPosition.TabIndex = 12;
+            this.TBPosition.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBPosition_KeyPress);
             // 
             // TBTMNumber
             // 
@@ -126,27 +129,31 @@
             this.TBTMNumber.Name = "TBTMNumber";
             this.TBTMNumber.Size = new System.Drawing.Size(200, 20);
             this.TBTMNumber.TabIndex = 11;
+            this.TBTMNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBTMNumber_KeyPress);
             // 
             // TBAddress
             // 
             this.TBAddress.Location = new System.Drawing.Point(23, 144);
             this.TBAddress.Name = "TBAddress";
-            this.TBAddress.Size = new System.Drawing.Size(433, 20);
+            this.TBAddress.Size = new System.Drawing.Size(379, 20);
             this.TBAddress.TabIndex = 10;
+            this.TBAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBAddress_KeyPress);
             // 
             // TBFName
             // 
-            this.TBFName.Location = new System.Drawing.Point(153, 92);
+            this.TBFName.Location = new System.Drawing.Point(137, 92);
             this.TBFName.Name = "TBFName";
-            this.TBFName.Size = new System.Drawing.Size(200, 20);
+            this.TBFName.Size = new System.Drawing.Size(160, 20);
             this.TBFName.TabIndex = 9;
+            this.TBFName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBFName_KeyPress);
             // 
             // TBLName
             // 
             this.TBLName.Location = new System.Drawing.Point(23, 92);
             this.TBLName.Name = "TBLName";
-            this.TBLName.Size = new System.Drawing.Size(124, 20);
+            this.TBLName.Size = new System.Drawing.Size(108, 20);
             this.TBLName.TabIndex = 8;
+            this.TBLName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBLName_KeyPress);
             // 
             // label7
             // 
@@ -160,7 +167,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(356, 76);
+            this.label4.Location = new System.Drawing.Point(302, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 4;
@@ -169,7 +176,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(153, 76);
+            this.label3.Location = new System.Drawing.Point(141, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 3;
@@ -217,9 +224,11 @@
             this.TBEmployeeID.Name = "TBEmployeeID";
             this.TBEmployeeID.Size = new System.Drawing.Size(108, 20);
             this.TBEmployeeID.TabIndex = 0;
+            this.TBEmployeeID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBEmployeeID_KeyPress);
             // 
             // GB2
             // 
+            this.GB2.Controls.Add(this.label24);
             this.GB2.Controls.Add(this.label23);
             this.GB2.Controls.Add(this.label17);
             this.GB2.Controls.Add(this.TBOvertime);
@@ -246,6 +255,15 @@
             this.GB2.TabStop = false;
             this.GB2.Text = "Employee\'s Payroll";
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(216, 22);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(68, 26);
+            this.label24.TabIndex = 28;
+            this.label24.Text = "Acquired Per\r\n      Hours";
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -266,18 +284,22 @@
             // 
             // TBOvertime
             // 
+            this.TBOvertime.Enabled = false;
             this.TBOvertime.Location = new System.Drawing.Point(318, 86);
             this.TBOvertime.Name = "TBOvertime";
             this.TBOvertime.Size = new System.Drawing.Size(87, 20);
             this.TBOvertime.TabIndex = 25;
+            this.TBOvertime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TBOvertime.TextChanged += new System.EventHandler(this.TBOvertime_TextChanged);
             // 
             // TBRegular
             // 
+            this.TBRegular.Enabled = false;
             this.TBRegular.Location = new System.Drawing.Point(318, 51);
             this.TBRegular.Name = "TBRegular";
             this.TBRegular.Size = new System.Drawing.Size(87, 20);
             this.TBRegular.TabIndex = 24;
+            this.TBRegular.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TBRegular.TextChanged += new System.EventHandler(this.TBRegular_TextChanged);
             // 
             // label21
@@ -300,26 +322,30 @@
             // 
             // TBNAPaid
             // 
+            this.TBNAPaid.Enabled = false;
             this.TBNAPaid.Location = new System.Drawing.Point(318, 188);
             this.TBNAPaid.Name = "TBNAPaid";
             this.TBNAPaid.Size = new System.Drawing.Size(87, 20);
             this.TBNAPaid.TabIndex = 21;
+            this.TBNAPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(217, 191);
+            this.label13.Location = new System.Drawing.Point(220, 191);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 13);
+            this.label13.Size = new System.Drawing.Size(90, 13);
             this.label13.TabIndex = 20;
-            this.label13.Text = "Net Amount Paid";
+            this.label13.Text = "Net Amount Paid:";
             // 
             // TBWHTax
             // 
+            this.TBWHTax.Enabled = false;
             this.TBWHTax.Location = new System.Drawing.Point(318, 158);
             this.TBWHTax.Name = "TBWHTax";
             this.TBWHTax.Size = new System.Drawing.Size(87, 20);
             this.TBWHTax.TabIndex = 19;
+            this.TBWHTax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TBWHTax.TextChanged += new System.EventHandler(this.TBWHTax_TextChanged_1);
             // 
             // label12
@@ -327,16 +353,18 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(206, 158);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 13);
+            this.label12.Size = new System.Drawing.Size(104, 13);
             this.label12.TabIndex = 18;
-            this.label12.Text = "3% Withholding Tax";
+            this.label12.Text = "3% Withholding Tax:";
             // 
             // TBTRWage
             // 
+            this.TBTRWage.Enabled = false;
             this.TBTRWage.Location = new System.Drawing.Point(318, 129);
             this.TBTRWage.Name = "TBTRWage";
             this.TBTRWage.Size = new System.Drawing.Size(87, 20);
             this.TBTRWage.TabIndex = 17;
+            this.TBTRWage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TBTRWage.TextChanged += new System.EventHandler(this.TBTRWage_TextChanged);
             // 
             // TBTAHOTRHour
@@ -345,6 +373,7 @@
             this.TBTAHOTRHour.Name = "TBTAHOTRHour";
             this.TBTAHOTRHour.Size = new System.Drawing.Size(87, 20);
             this.TBTAHOTRHour.TabIndex = 16;
+            this.TBTAHOTRHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TBTAHOTRHour.TextChanged += new System.EventHandler(this.TBTAHOTRHour_TextChanged);
             // 
             // TBTAHRRHour
@@ -353,6 +382,7 @@
             this.TBTAHRRHour.Name = "TBTAHRRHour";
             this.TBTAHRRHour.Size = new System.Drawing.Size(87, 20);
             this.TBTAHRRHour.TabIndex = 15;
+            this.TBTAHRRHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TBTAHRRHour.TextChanged += new System.EventHandler(this.TBTAHRRHour_TextChanged);
             // 
             // TBOTRHour
@@ -361,6 +391,7 @@
             this.TBOTRHour.Name = "TBOTRHour";
             this.TBOTRHour.Size = new System.Drawing.Size(87, 20);
             this.TBOTRHour.TabIndex = 14;
+            this.TBOTRHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TBRRHour
             // 
@@ -368,6 +399,8 @@
             this.TBRRHour.Name = "TBRRHour";
             this.TBRRHour.Size = new System.Drawing.Size(87, 20);
             this.TBRRHour.TabIndex = 13;
+            this.TBRRHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBRRHour.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBRRHour_KeyPress);
             // 
             // label11
             // 
@@ -383,9 +416,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(204, 129);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 13);
+            this.label10.Size = new System.Drawing.Size(106, 13);
             this.label10.TabIndex = 2;
-            this.label10.Text = "Total Regular Wage";
+            this.label10.Text = "Total Regular Wage:";
             // 
             // label9
             // 
@@ -421,66 +454,84 @@
             this.GB3.Controls.Add(this.Label);
             this.GB3.Controls.Add(this.label18);
             this.GB3.Controls.Add(this.label19);
-            this.GB3.Location = new System.Drawing.Point(429, 256);
+            this.GB3.Location = new System.Drawing.Point(429, 12);
             this.GB3.Name = "GB3";
-            this.GB3.Size = new System.Drawing.Size(313, 217);
+            this.GB3.Size = new System.Drawing.Size(313, 327);
             this.GB3.TabIndex = 22;
             this.GB3.TabStop = false;
             this.GB3.Text = "Employee\'s Salary Deduction";
             // 
             // TBTNAPaid
             // 
-            this.TBTNAPaid.Location = new System.Drawing.Point(223, 186);
+            this.TBTNAPaid.Enabled = false;
+            this.TBTNAPaid.Location = new System.Drawing.Point(198, 282);
+            this.TBTNAPaid.Multiline = true;
             this.TBTNAPaid.Name = "TBTNAPaid";
-            this.TBTNAPaid.Size = new System.Drawing.Size(87, 20);
+            this.TBTNAPaid.Size = new System.Drawing.Size(109, 39);
             this.TBTNAPaid.TabIndex = 30;
+            this.TBTNAPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBTNAPaid.TextChanged += new System.EventHandler(this.TBTNAPaid_TextChanged);
             // 
             // TBTDedtn
             // 
-            this.TBTDedtn.Location = new System.Drawing.Point(223, 160);
+            this.TBTDedtn.Enabled = false;
+            this.TBTDedtn.Location = new System.Drawing.Point(198, 237);
+            this.TBTDedtn.Multiline = true;
             this.TBTDedtn.Name = "TBTDedtn";
-            this.TBTDedtn.Size = new System.Drawing.Size(87, 20);
+            this.TBTDedtn.Size = new System.Drawing.Size(109, 39);
             this.TBTDedtn.TabIndex = 29;
+            this.TBTDedtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBTDedtn.TextChanged += new System.EventHandler(this.TBTDedtn_TextChanged);
             // 
             // TBOthers
             // 
-            this.TBOthers.Location = new System.Drawing.Point(130, 133);
+            this.TBOthers.Location = new System.Drawing.Point(125, 156);
             this.TBOthers.Name = "TBOthers";
             this.TBOthers.Size = new System.Drawing.Size(87, 20);
             this.TBOthers.TabIndex = 28;
+            this.TBOthers.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBOthers.TextChanged += new System.EventHandler(this.TBOthers_TextChanged);
             // 
             // TBPHealthFund
             // 
-            this.TBPHealthFund.Location = new System.Drawing.Point(130, 105);
+            this.TBPHealthFund.Location = new System.Drawing.Point(125, 128);
             this.TBPHealthFund.Name = "TBPHealthFund";
             this.TBPHealthFund.Size = new System.Drawing.Size(87, 20);
             this.TBPHealthFund.TabIndex = 27;
+            this.TBPHealthFund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBPHealthFund.TextChanged += new System.EventHandler(this.TBPHealthFund_TextChanged);
             // 
             // TBPIbigFund
             // 
-            this.TBPIbigFund.Location = new System.Drawing.Point(130, 77);
+            this.TBPIbigFund.Location = new System.Drawing.Point(125, 100);
             this.TBPIbigFund.Name = "TBPIbigFund";
             this.TBPIbigFund.Size = new System.Drawing.Size(87, 20);
             this.TBPIbigFund.TabIndex = 26;
+            this.TBPIbigFund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBPIbigFund.TextChanged += new System.EventHandler(this.TBPIbigFund_TextChanged);
             // 
             // TBGSISFund
             // 
-            this.TBGSISFund.Location = new System.Drawing.Point(130, 48);
+            this.TBGSISFund.Location = new System.Drawing.Point(125, 71);
             this.TBGSISFund.Name = "TBGSISFund";
             this.TBGSISFund.Size = new System.Drawing.Size(87, 20);
             this.TBGSISFund.TabIndex = 25;
+            this.TBGSISFund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBGSISFund.TextChanged += new System.EventHandler(this.TBGSISFund_TextChanged);
             // 
             // TBSSSFund
             // 
-            this.TBSSSFund.Location = new System.Drawing.Point(130, 19);
+            this.TBSSSFund.Location = new System.Drawing.Point(125, 42);
             this.TBSSSFund.Name = "TBSSSFund";
             this.TBSSSFund.Size = new System.Drawing.Size(87, 20);
             this.TBSSSFund.TabIndex = 24;
+            this.TBSSSFund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBSSSFund.TextChanged += new System.EventHandler(this.TBSSSFund_TextChanged);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(100, 189);
+            this.label22.Location = new System.Drawing.Point(75, 295);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(117, 13);
             this.label22.TabIndex = 21;
@@ -489,7 +540,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(149, 163);
+            this.label14.Location = new System.Drawing.Point(124, 253);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 13);
             this.label14.TabIndex = 20;
@@ -498,7 +549,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(83, 136);
+            this.label15.Location = new System.Drawing.Point(78, 159);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(41, 13);
             this.label15.TabIndex = 18;
@@ -507,7 +558,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(17, 108);
+            this.label16.Location = new System.Drawing.Point(12, 131);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(107, 13);
             this.label16.TabIndex = 3;
@@ -516,7 +567,7 @@
             // Label
             // 
             this.Label.AutoSize = true;
-            this.Label.Location = new System.Drawing.Point(62, 51);
+            this.Label.Location = new System.Drawing.Point(57, 74);
             this.Label.Name = "Label";
             this.Label.Size = new System.Drawing.Size(62, 13);
             this.Label.TabIndex = 2;
@@ -525,7 +576,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(66, 22);
+            this.label18.Location = new System.Drawing.Point(61, 45);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(58, 13);
             this.label18.TabIndex = 1;
@@ -534,23 +585,34 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(41, 80);
+            this.label19.Location = new System.Drawing.Point(36, 103);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(83, 13);
             this.label19.TabIndex = 0;
             this.label19.Text = "PAG-IBIG Fund:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Papyrus", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(472, 397);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(231, 30);
+            this.label25.TabIndex = 23;
+            this.label25.Text = "LABORATORY # 2";
             // 
             // FrontPhase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 485);
+            this.Controls.Add(this.label25);
             this.Controls.Add(this.GB3);
             this.Controls.Add(this.GB2);
             this.Controls.Add(this.GB1);
             this.Name = "FrontPhase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "MIT-LAB#2";
             this.GB1.ResumeLayout(false);
             this.GB1.PerformLayout();
             this.GB2.ResumeLayout(false);
@@ -558,6 +620,7 @@
             this.GB3.ResumeLayout(false);
             this.GB3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -613,6 +676,8 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox TBOvertime;
         private System.Windows.Forms.TextBox TBRegular;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
     }
 }
 
