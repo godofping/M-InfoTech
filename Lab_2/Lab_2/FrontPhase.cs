@@ -26,17 +26,6 @@ namespace Lab_2
         float DblTRWage;
         double DblWHTax;
         float DblNAPaid;
-        
-
-       
-
-        Double DblSSSFund;
-        Double DblGSISFund;
-        Double DblPGIBGFund;
-        Double DblPHLHLTHFund;
-        Double DblOthers;
-        Double DblTDtn;
-        Double DblTNAP;
 
         public FrontPhase()
         {
@@ -57,21 +46,6 @@ namespace Lab_2
 
             }
         }
-
-        private void TBRRHour_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                TBRegular.Text = (float.Parse(TBRRHour.Text) * float.Parse(TBTAHRRHour.Text)).ToString();
-            }
-            catch
-            {
-                TBRegular.Text = "00.0";
-
-            }
-        }
-
-
 
         private void TBTAHOTRHour_TextChanged(object sender, EventArgs e)
         {
@@ -101,7 +75,35 @@ namespace Lab_2
             }
         }
 
-<<<<<<< HEAD
+        /*  private void TBSSSFund_TextChanged(object sender, EventArgs e)
+        {
+              TBTDedtn.Text = "00.0";
+          try
+          {
+          TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+         
+            }
+            catch
+            {
+            TBTDedtn.Text = "00.0";
+            }
+            }
+        */
+        private void TBOvertime_TextChanged(object sender, EventArgs e)
+        {
+            TBTRWage.Text = "00.0";
+            try
+            {
+
+                TBTRWage.Text = (float.Parse(TBRegular.Text) + float.Parse(TBOvertime.Text)).ToString();
+            }
+            catch
+            {
+                TBTRWage.Text = "00.0";
+
+            }
+        }
+
         private void TBTRWage_TextChanged(object sender, EventArgs e)
         {
             try
@@ -231,61 +233,131 @@ namespace Lab_2
         }
 
         private void TBPosition_KeyPress(object sender, KeyPressEventArgs e)
-=======
-        private void TBOvertime_TextChanged(object sender, EventArgs e)
->>>>>>> dd5071dd8040abc4bfd394ebcf55f79283a63741
-        {
-            TBTRWage.Text = "00.0";
-            try
-            {
-
-                TBTRWage.Text = (float.Parse(TBRegular.Text) + float.Parse(TBOvertime.Text)).ToString();
-            }
-            catch
-            {
-                TBTRWage.Text = "00.0";
-
-            }
-        }
-
-        
-
-        private void TBWHTax_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TBTRWage_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                double DblReg = Convert.ToDouble(TBTRWage.Text);
-               DblWHTax = DblReg * 0.03;
-                TBWHTax.Text = DblWHTax.ToString();
+                if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+
+
             }
             catch
             {
 
-
             }
         }
 
-        private void TBWHTax_TextChanged_1(object sender, EventArgs e)
+        private void TBTMNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
             {
-                double DblWHTaxes2 = Convert.ToDouble(TBWHTax.Text);
-                double DblNAPaid = DblReg - DblWHTax;
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+
 
             }
-            catch 
+            catch
             {
 
-               
             }
         }
 
-<<<<<<< HEAD
+        private void TBRRHour_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void TBOthers_TextChanged(object sender, EventArgs e)
+        {
+            TBTDedtn.Text = "00.0";
+            try
+            {
+                TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+
+            }
+            catch
+            {
+                TBTDedtn.Text = "00.0";
+            }
+
+        }
+
+        private void TBPHealthFund_TextChanged(object sender, EventArgs e)
+        {
+            TBTDedtn.Text = "00.0";
+            try
+            {
+                TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+
+            }
+            catch
+            {
+                TBTDedtn.Text = "00.0";
+            }
+
+        }
+
+        private void TBPIbigFund_TextChanged(object sender, EventArgs e)
+        {
+            TBTDedtn.Text = "00.0";
+            try
+            {
+                TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+
+            }
+            catch
+            {
+                TBTDedtn.Text = "00.0";
+            }
+
+        }
+
+        private void TBGSISFund_TextChanged(object sender, EventArgs e)
+        {
+            TBTDedtn.Text = "00.0";
+            try
+            {
+                TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+
+            }
+            catch
+            {
+                TBTDedtn.Text = "00.0";
+            }
+
+        }
+
+        private void TBSSSFund_TextChanged(object sender, EventArgs e)
+        {
+            TBTDedtn.Text = "00.0";
+            try
+            {
+                TBTDedtn.Text = (float.Parse(TBSSSFund.Text) + float.Parse(TBGSISFund.Text) + float.Parse(TBPIbigFund.Text) + float.Parse(TBPHealthFund.Text) + float.Parse(TBOthers.Text)).ToString();
+
+            }
+            catch
+            {
+                TBTDedtn.Text = "00.0";
+            }
+
+        }
+
         private void TbGrocerries_TextChanged(object sender, EventArgs e)
         {
             try
@@ -347,9 +419,6 @@ namespace Lab_2
         }
 
         private void TBTNAPaid_TextChanged(object sender, EventArgs e)
-=======
-        private void FrontPhase_Load(object sender, EventArgs e)
->>>>>>> dd5071dd8040abc4bfd394ebcf55f79283a63741
         {
             try
             {
@@ -367,7 +436,6 @@ namespace Lab_2
             }
         }
 
-<<<<<<< HEAD
         private void Lblsalary_Click(object sender, EventArgs e)
         {
             lblsalary.Text = TBTNAPaid.Text;
@@ -677,8 +745,5 @@ namespace Lab_2
 
 
 
-=======
-       
->>>>>>> dd5071dd8040abc4bfd394ebcf55f79283a63741
     }
 }
