@@ -8,3 +8,4 @@ C:\Users\lev\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.csproj.GenerateResou
 C:\Users\lev\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.csproj.CoreCompileInputs.cache
 C:\Users\lev\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.exe
 C:\Users\lev\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.pdb
+C:\Users\lev\Desktop\M-InfoTech\Lab_2\Lab_2\obj\Debug\Lab_2.BackPhase.resources

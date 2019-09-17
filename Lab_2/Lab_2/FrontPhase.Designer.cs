@@ -64,25 +64,41 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.GB3 = new System.Windows.Forms.GroupBox();
-            this.TBTNAPaid = new System.Windows.Forms.TextBox();
-            this.TBTDedtn = new System.Windows.Forms.TextBox();
-            this.TBOthers = new System.Windows.Forms.TextBox();
-            this.TBPHealthFund = new System.Windows.Forms.TextBox();
-            this.TBPIbigFund = new System.Windows.Forms.TextBox();
-            this.TBGSISFund = new System.Windows.Forms.TextBox();
-            this.TBSSSFund = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.Label = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.Label = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.TBSSSFund = new System.Windows.Forms.TextBox();
+            this.TBGSISFund = new System.Windows.Forms.TextBox();
+            this.TBPIbigFund = new System.Windows.Forms.TextBox();
+            this.TBPHealthFund = new System.Windows.Forms.TextBox();
+            this.TBOthers = new System.Windows.Forms.TextBox();
+            this.TBTDedtn = new System.Windows.Forms.TextBox();
+            this.TBTNAPaid = new System.Windows.Forms.TextBox();
+            this.GB3 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbtExpns = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.tbContengencies = new System.Windows.Forms.TextBox();
+            this.tbGrocerries = new System.Windows.Forms.TextBox();
+            this.tbWaterBll = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.tbElectrictBll = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.lblsalary = new System.Windows.Forms.Label();
+            this.lblsalaryyr = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.GB1.SuspendLayout();
             this.GB2.SuspendLayout();
             this.GB3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GB1
@@ -106,6 +122,7 @@
             this.GB1.Size = new System.Drawing.Size(411, 238);
             this.GB1.TabIndex = 0;
             this.GB1.TabStop = false;
+            this.GB1.Text = "Emplyee\'s Inormation";
             // 
             // TBMName
             // 
@@ -137,7 +154,6 @@
             this.TBAddress.Name = "TBAddress";
             this.TBAddress.Size = new System.Drawing.Size(379, 20);
             this.TBAddress.TabIndex = 10;
-            this.TBAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBAddress_KeyPress);
             // 
             // TBFName
             // 
@@ -375,6 +391,7 @@
             this.TBTAHOTRHour.TabIndex = 16;
             this.TBTAHOTRHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TBTAHOTRHour.TextChanged += new System.EventHandler(this.TBTAHOTRHour_TextChanged);
+            this.TBTAHOTRHour.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBTAHOTRHour_KeyPress);
             // 
             // TBTAHRRHour
             // 
@@ -384,6 +401,7 @@
             this.TBTAHRRHour.TabIndex = 15;
             this.TBTAHRRHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TBTAHRRHour.TextChanged += new System.EventHandler(this.TBTAHRRHour_TextChanged);
+            this.TBTAHRRHour.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBTAHRRHour_KeyPress);
             // 
             // TBOTRHour
             // 
@@ -392,6 +410,7 @@
             this.TBOTRHour.Size = new System.Drawing.Size(87, 20);
             this.TBOTRHour.TabIndex = 14;
             this.TBOTRHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBOTRHour.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBOTRHour_KeyPress);
             // 
             // TBRRHour
             // 
@@ -438,140 +457,14 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Total Acquired \r\n       Hours";
             // 
-            // GB3
+            // label19
             // 
-            this.GB3.Controls.Add(this.TBTNAPaid);
-            this.GB3.Controls.Add(this.TBTDedtn);
-            this.GB3.Controls.Add(this.TBOthers);
-            this.GB3.Controls.Add(this.TBPHealthFund);
-            this.GB3.Controls.Add(this.TBPIbigFund);
-            this.GB3.Controls.Add(this.TBGSISFund);
-            this.GB3.Controls.Add(this.TBSSSFund);
-            this.GB3.Controls.Add(this.label22);
-            this.GB3.Controls.Add(this.label14);
-            this.GB3.Controls.Add(this.label15);
-            this.GB3.Controls.Add(this.label16);
-            this.GB3.Controls.Add(this.Label);
-            this.GB3.Controls.Add(this.label18);
-            this.GB3.Controls.Add(this.label19);
-            this.GB3.Location = new System.Drawing.Point(429, 12);
-            this.GB3.Name = "GB3";
-            this.GB3.Size = new System.Drawing.Size(313, 327);
-            this.GB3.TabIndex = 22;
-            this.GB3.TabStop = false;
-            this.GB3.Text = "Employee\'s Salary Deduction";
-            // 
-            // TBTNAPaid
-            // 
-            this.TBTNAPaid.Enabled = false;
-            this.TBTNAPaid.Location = new System.Drawing.Point(198, 282);
-            this.TBTNAPaid.Multiline = true;
-            this.TBTNAPaid.Name = "TBTNAPaid";
-            this.TBTNAPaid.Size = new System.Drawing.Size(109, 39);
-            this.TBTNAPaid.TabIndex = 30;
-            this.TBTNAPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TBTNAPaid.TextChanged += new System.EventHandler(this.TBTNAPaid_TextChanged);
-            // 
-            // TBTDedtn
-            // 
-            this.TBTDedtn.Enabled = false;
-            this.TBTDedtn.Location = new System.Drawing.Point(198, 237);
-            this.TBTDedtn.Multiline = true;
-            this.TBTDedtn.Name = "TBTDedtn";
-            this.TBTDedtn.Size = new System.Drawing.Size(109, 39);
-            this.TBTDedtn.TabIndex = 29;
-            this.TBTDedtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TBTDedtn.TextChanged += new System.EventHandler(this.TBTDedtn_TextChanged);
-            // 
-            // TBOthers
-            // 
-            this.TBOthers.Location = new System.Drawing.Point(125, 156);
-            this.TBOthers.Name = "TBOthers";
-            this.TBOthers.Size = new System.Drawing.Size(87, 20);
-            this.TBOthers.TabIndex = 28;
-            this.TBOthers.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TBOthers.TextChanged += new System.EventHandler(this.TBOthers_TextChanged);
-            // 
-            // TBPHealthFund
-            // 
-            this.TBPHealthFund.Location = new System.Drawing.Point(125, 128);
-            this.TBPHealthFund.Name = "TBPHealthFund";
-            this.TBPHealthFund.Size = new System.Drawing.Size(87, 20);
-            this.TBPHealthFund.TabIndex = 27;
-            this.TBPHealthFund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TBPHealthFund.TextChanged += new System.EventHandler(this.TBPHealthFund_TextChanged);
-            // 
-            // TBPIbigFund
-            // 
-            this.TBPIbigFund.Location = new System.Drawing.Point(125, 100);
-            this.TBPIbigFund.Name = "TBPIbigFund";
-            this.TBPIbigFund.Size = new System.Drawing.Size(87, 20);
-            this.TBPIbigFund.TabIndex = 26;
-            this.TBPIbigFund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TBPIbigFund.TextChanged += new System.EventHandler(this.TBPIbigFund_TextChanged);
-            // 
-            // TBGSISFund
-            // 
-            this.TBGSISFund.Location = new System.Drawing.Point(125, 71);
-            this.TBGSISFund.Name = "TBGSISFund";
-            this.TBGSISFund.Size = new System.Drawing.Size(87, 20);
-            this.TBGSISFund.TabIndex = 25;
-            this.TBGSISFund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TBGSISFund.TextChanged += new System.EventHandler(this.TBGSISFund_TextChanged);
-            // 
-            // TBSSSFund
-            // 
-            this.TBSSSFund.Location = new System.Drawing.Point(125, 42);
-            this.TBSSSFund.Name = "TBSSSFund";
-            this.TBSSSFund.Size = new System.Drawing.Size(87, 20);
-            this.TBSSSFund.TabIndex = 24;
-            this.TBSSSFund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TBSSSFund.TextChanged += new System.EventHandler(this.TBSSSFund_TextChanged);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(75, 295);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(117, 13);
-            this.label22.TabIndex = 21;
-            this.label22.Text = "Total Net Amount Paid:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(124, 253);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 13);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "Total Dedt\'n:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(78, 159);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 13);
-            this.label15.TabIndex = 18;
-            this.label15.Text = "Others:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(12, 131);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(107, 13);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "PHIL-HEALTH Fund:";
-            // 
-            // Label
-            // 
-            this.Label.AutoSize = true;
-            this.Label.Location = new System.Drawing.Point(57, 74);
-            this.Label.Name = "Label";
-            this.Label.Size = new System.Drawing.Size(62, 13);
-            this.Label.TabIndex = 2;
-            this.Label.Text = "GSIS Fund:";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(36, 103);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(83, 13);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "PAG-IBIG Fund:";
             // 
             // label18
             // 
@@ -582,31 +475,324 @@
             this.label18.TabIndex = 1;
             this.label18.Text = "SSS Fund:";
             // 
-            // label19
+            // Label
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(36, 103);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(83, 13);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "PAG-IBIG Fund:";
+            this.Label.AutoSize = true;
+            this.Label.Location = new System.Drawing.Point(57, 74);
+            this.Label.Name = "Label";
+            this.Label.Size = new System.Drawing.Size(62, 13);
+            this.Label.TabIndex = 2;
+            this.Label.Text = "GSIS Fund:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(12, 131);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(107, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "PHIL-HEALTH Fund:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(78, 159);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(41, 13);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "Others:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(73, 213);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(68, 13);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "Total Dedt\'n:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(21, 256);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(117, 13);
+            this.label22.TabIndex = 21;
+            this.label22.Text = "Total Net Amount Paid:";
+            // 
+            // TBSSSFund
+            // 
+            this.TBSSSFund.Location = new System.Drawing.Point(125, 42);
+            this.TBSSSFund.Name = "TBSSSFund";
+            this.TBSSSFund.Size = new System.Drawing.Size(87, 20);
+            this.TBSSSFund.TabIndex = 24;
+            this.TBSSSFund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBSSSFund.TextChanged += new System.EventHandler(this.TBSSSFund_TextChanged);
+            this.TBSSSFund.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBSSSFund_KeyPress);
+            // 
+            // TBGSISFund
+            // 
+            this.TBGSISFund.Location = new System.Drawing.Point(125, 71);
+            this.TBGSISFund.Name = "TBGSISFund";
+            this.TBGSISFund.Size = new System.Drawing.Size(87, 20);
+            this.TBGSISFund.TabIndex = 25;
+            this.TBGSISFund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBGSISFund.TextChanged += new System.EventHandler(this.TBGSISFund_TextChanged);
+            this.TBGSISFund.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBGSISFund_KeyPress);
+            // 
+            // TBPIbigFund
+            // 
+            this.TBPIbigFund.Location = new System.Drawing.Point(125, 100);
+            this.TBPIbigFund.Name = "TBPIbigFund";
+            this.TBPIbigFund.Size = new System.Drawing.Size(87, 20);
+            this.TBPIbigFund.TabIndex = 26;
+            this.TBPIbigFund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBPIbigFund.TextChanged += new System.EventHandler(this.TBPIbigFund_TextChanged);
+            this.TBPIbigFund.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBPIbigFund_KeyPress);
+            // 
+            // TBPHealthFund
+            // 
+            this.TBPHealthFund.Location = new System.Drawing.Point(125, 128);
+            this.TBPHealthFund.Name = "TBPHealthFund";
+            this.TBPHealthFund.Size = new System.Drawing.Size(87, 20);
+            this.TBPHealthFund.TabIndex = 27;
+            this.TBPHealthFund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBPHealthFund.TextChanged += new System.EventHandler(this.TBPHealthFund_TextChanged);
+            this.TBPHealthFund.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBPHealthFund_KeyPress);
+            // 
+            // TBOthers
+            // 
+            this.TBOthers.Location = new System.Drawing.Point(125, 156);
+            this.TBOthers.Name = "TBOthers";
+            this.TBOthers.Size = new System.Drawing.Size(87, 20);
+            this.TBOthers.TabIndex = 28;
+            this.TBOthers.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBOthers.TextChanged += new System.EventHandler(this.TBOthers_TextChanged);
+            this.TBOthers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBOthers_KeyPress);
+            // 
+            // TBTDedtn
+            // 
+            this.TBTDedtn.Enabled = false;
+            this.TBTDedtn.Location = new System.Drawing.Point(147, 197);
+            this.TBTDedtn.Multiline = true;
+            this.TBTDedtn.Name = "TBTDedtn";
+            this.TBTDedtn.Size = new System.Drawing.Size(109, 39);
+            this.TBTDedtn.TabIndex = 29;
+            this.TBTDedtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBTDedtn.TextChanged += new System.EventHandler(this.TBTDedtn_TextChanged);
+            // 
+            // TBTNAPaid
+            // 
+            this.TBTNAPaid.Enabled = false;
+            this.TBTNAPaid.Location = new System.Drawing.Point(144, 243);
+            this.TBTNAPaid.Multiline = true;
+            this.TBTNAPaid.Name = "TBTNAPaid";
+            this.TBTNAPaid.Size = new System.Drawing.Size(109, 39);
+            this.TBTNAPaid.TabIndex = 30;
+            this.TBTNAPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBTNAPaid.TextChanged += new System.EventHandler(this.TBTNAPaid_TextChanged_1);
+            // 
+            // GB3
+            // 
+            this.GB3.Controls.Add(this.TBTDedtn);
+            this.GB3.Controls.Add(this.TBOthers);
+            this.GB3.Controls.Add(this.TBPHealthFund);
+            this.GB3.Controls.Add(this.TBPIbigFund);
+            this.GB3.Controls.Add(this.TBGSISFund);
+            this.GB3.Controls.Add(this.TBSSSFund);
+            this.GB3.Controls.Add(this.label14);
+            this.GB3.Controls.Add(this.label15);
+            this.GB3.Controls.Add(this.label16);
+            this.GB3.Controls.Add(this.Label);
+            this.GB3.Controls.Add(this.label18);
+            this.GB3.Controls.Add(this.label19);
+            this.GB3.Location = new System.Drawing.Point(429, 12);
+            this.GB3.Name = "GB3";
+            this.GB3.Size = new System.Drawing.Size(272, 292);
+            this.GB3.TabIndex = 22;
+            this.GB3.TabStop = false;
+            this.GB3.Text = "Employee\'s Salary Deduction";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.TBTNAPaid);
+            this.groupBox1.Controls.Add(this.tbtExpns);
+            this.groupBox1.Controls.Add(this.label29);
+            this.groupBox1.Controls.Add(this.tbContengencies);
+            this.groupBox1.Controls.Add(this.tbGrocerries);
+            this.groupBox1.Controls.Add(this.tbWaterBll);
+            this.groupBox1.Controls.Add(this.label28);
+            this.groupBox1.Controls.Add(this.label27);
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.label26);
+            this.groupBox1.Controls.Add(this.label25);
+            this.groupBox1.Controls.Add(this.tbElectrictBll);
+            this.groupBox1.Location = new System.Drawing.Point(707, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(269, 292);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Monthly Expenses";
+            // 
+            // tbtExpns
+            // 
+            this.tbtExpns.Enabled = false;
+            this.tbtExpns.Location = new System.Drawing.Point(144, 197);
+            this.tbtExpns.Multiline = true;
+            this.tbtExpns.Name = "tbtExpns";
+            this.tbtExpns.Size = new System.Drawing.Size(109, 39);
+            this.tbtExpns.TabIndex = 31;
+            this.tbtExpns.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbtExpns.TextChanged += new System.EventHandler(this.TbtExpns_TextChanged);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(70, 213);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(68, 13);
+            this.label29.TabIndex = 31;
+            this.label29.Text = "Total Expn\'s:";
+            // 
+            // tbContengencies
+            // 
+            this.tbContengencies.Location = new System.Drawing.Point(122, 128);
+            this.tbContengencies.Name = "tbContengencies";
+            this.tbContengencies.Size = new System.Drawing.Size(87, 20);
+            this.tbContengencies.TabIndex = 37;
+            this.tbContengencies.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbContengencies.TextChanged += new System.EventHandler(this.TbContengencies_TextChanged);
+            this.tbContengencies.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbContengencies_KeyPress);
+            // 
+            // tbGrocerries
+            // 
+            this.tbGrocerries.Location = new System.Drawing.Point(122, 100);
+            this.tbGrocerries.Name = "tbGrocerries";
+            this.tbGrocerries.Size = new System.Drawing.Size(87, 20);
+            this.tbGrocerries.TabIndex = 36;
+            this.tbGrocerries.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbGrocerries.TextChanged += new System.EventHandler(this.TbGrocerries_TextChanged);
+            this.tbGrocerries.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbGrocerries_KeyPress);
+            // 
+            // tbWaterBll
+            // 
+            this.tbWaterBll.Location = new System.Drawing.Point(122, 71);
+            this.tbWaterBll.Name = "tbWaterBll";
+            this.tbWaterBll.Size = new System.Drawing.Size(87, 20);
+            this.tbWaterBll.TabIndex = 35;
+            this.tbWaterBll.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbWaterBll.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbWaterBll_KeyPress);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(12, 131);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(107, 13);
+            this.label28.TabIndex = 34;
+            this.label28.Text = "10% Contengencies :";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(61, 103);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(55, 13);
+            this.label27.TabIndex = 33;
+            this.label27.Text = "Groceries:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(61, 76);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(55, 13);
+            this.label26.TabIndex = 32;
+            this.label26.Text = "Water Bill:";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Papyrus", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(472, 397);
+            this.label25.Location = new System.Drawing.Point(52, 45);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(231, 30);
-            this.label25.TabIndex = 23;
-            this.label25.Text = "LABORATORY # 2";
+            this.label25.Size = new System.Drawing.Size(64, 13);
+            this.label25.TabIndex = 31;
+            this.label25.Text = "Electrict Bill:";
+            // 
+            // tbElectrictBll
+            // 
+            this.tbElectrictBll.Location = new System.Drawing.Point(122, 42);
+            this.tbElectrictBll.Name = "tbElectrictBll";
+            this.tbElectrictBll.Size = new System.Drawing.Size(87, 20);
+            this.tbElectrictBll.TabIndex = 31;
+            this.tbElectrictBll.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbElectrictBll.TextChanged += new System.EventHandler(this.TbElectrictBll_TextChanged);
+            this.tbElectrictBll.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbElectrictBll_KeyPress);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Adobe Devanagari", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(512, 345);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(189, 28);
+            this.label31.TabIndex = 39;
+            this.label31.Text = "MONTHLY SALARY :";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Adobe Devanagari", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(527, 401);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(174, 28);
+            this.label30.TabIndex = 40;
+            this.label30.Text = "ANNUAL SALARY :";
+            // 
+            // lblsalary
+            // 
+            this.lblsalary.AutoSize = true;
+            this.lblsalary.Font = new System.Drawing.Font("Adobe Devanagari", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsalary.Location = new System.Drawing.Point(717, 345);
+            this.lblsalary.Name = "lblsalary";
+            this.lblsalary.Size = new System.Drawing.Size(132, 28);
+            this.lblsalary.TabIndex = 41;
+            this.lblsalary.Text = "____________";
+            this.lblsalary.Click += new System.EventHandler(this.Lblsalary_Click);
+            // 
+            // lblsalaryyr
+            // 
+            this.lblsalaryyr.AutoSize = true;
+            this.lblsalaryyr.Font = new System.Drawing.Font("Adobe Devanagari", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsalaryyr.Location = new System.Drawing.Point(717, 399);
+            this.lblsalaryyr.Name = "lblsalaryyr";
+            this.lblsalaryyr.Size = new System.Drawing.Size(132, 28);
+            this.lblsalaryyr.TabIndex = 42;
+            this.lblsalaryyr.Text = "____________";
+            this.lblsalaryyr.Click += new System.EventHandler(this.Lblsalaryyr_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Adobe Devanagari", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(899, 450);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "CHECKS";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // FrontPhase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 485);
-            this.Controls.Add(this.label25);
+            this.ClientSize = new System.Drawing.Size(986, 485);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblsalaryyr);
+            this.Controls.Add(this.lblsalary);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.label31);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.GB3);
             this.Controls.Add(this.GB2);
             this.Controls.Add(this.GB1);
@@ -619,6 +805,8 @@
             this.GB2.PerformLayout();
             this.GB3.ResumeLayout(false);
             this.GB3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -655,29 +843,44 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox GB3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label Label;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox TBTNAPaid;
-        private System.Windows.Forms.TextBox TBTDedtn;
-        private System.Windows.Forms.TextBox TBOthers;
-        private System.Windows.Forms.TextBox TBPHealthFund;
-        private System.Windows.Forms.TextBox TBPIbigFund;
-        private System.Windows.Forms.TextBox TBGSISFund;
-        private System.Windows.Forms.TextBox TBSSSFund;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox TBOvertime;
         private System.Windows.Forms.TextBox TBRegular;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label Label;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox TBSSSFund;
+        private System.Windows.Forms.TextBox TBGSISFund;
+        private System.Windows.Forms.TextBox TBPIbigFund;
+        private System.Windows.Forms.TextBox TBPHealthFund;
+        private System.Windows.Forms.TextBox TBOthers;
+        private System.Windows.Forms.TextBox TBTDedtn;
+        private System.Windows.Forms.TextBox TBTNAPaid;
+        private System.Windows.Forms.GroupBox GB3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tbElectrictBll;
+        private System.Windows.Forms.TextBox tbtExpns;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox tbContengencies;
+        private System.Windows.Forms.TextBox tbGrocerries;
+        private System.Windows.Forms.TextBox tbWaterBll;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lblsalary;
+        private System.Windows.Forms.Label lblsalaryyr;
+        private System.Windows.Forms.Button button1;
     }
 }
 

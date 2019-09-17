@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackPhase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackPhase.Designer.cs">
+      <DependentUpon>BackPhase.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontPhase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BackPhase.resx">
+      <DependentUpon>BackPhase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontPhase.resx">
       <DependentUpon>FrontPhase.cs</DependentUpon>
     </EmbeddedResource>

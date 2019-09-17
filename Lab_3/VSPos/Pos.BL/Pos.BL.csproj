@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Transaction\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pos.DL\Pos.DL.csproj" />
+    <ProjectReference Include="..\Pos.EL\Pos.EL.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -6,11 +6,11 @@ namespace Pos.EL.Transaction
 {
     public class Orders
     {
-        OrderID
-            CustomerID
-            Date
-            AmountPaid
-            AmouuntReceived
-            ChangeAmount
+        int OrderID;
+        int CustomerID;
+        string Date;
+        double AmountPaid;
+        double AmouuntReceived;
+        double ChangeAmount;
     }
 }
